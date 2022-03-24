@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © PotaBox, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/** @var  $block \PotaBox\ApiExample\Block\GitRepo\Index */
+$content = $block->getRepoInfo();
+$requestedString = $block->getRequestString();
+?>
+
+<div class="block-content">
+    <form method="GET" action="<?= $block->getFormAction() ?>">
+        <input type="text" name="repo" placeholder="Search for repo..." value="<?= $requestedString ?>">
+    </form>
+    <code>
+        <?php if (empty($content)): ?>
+            <?= __('There\'s no repo information') ?>
+        <?php else: ?>
+            <pre>
+                <?= $content ?>
+            </pre>
+        <?php endif; ?>
+    </code>
+</div>

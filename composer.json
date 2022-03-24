@@ -1,0 +1,23 @@
+{
+    "name": "potabox/api-example",
+    "description": "Example Magento module with open API",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "PotaBox\\ApiExample\\": ""
+        }
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Khoi Ngo",
+            "email": "khoimm92@gmail.com",
+            "homepage": "https://github.com/khoimm92",
+            "role": "Magento Developer"
+        }
+    ]
+}
